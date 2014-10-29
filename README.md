@@ -11,7 +11,9 @@ You run each test once, no problem - it works fine. THen do it again (not that I
 
 I've set up the repro as a unit test
 
-Open up ReproTest.cs and run the tests a couple of time. 
+Run in iPhoneSimulator. 
+
+Open up ReproTest.cs and run the tests a couple of time.  You'll see the read and write strings start to differ from each other after a while. 
 
 There are variations proving different assertions around async writing and writing streams versus byte arrays etc. 
 
