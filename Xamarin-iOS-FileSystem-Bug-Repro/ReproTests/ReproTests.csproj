@@ -88,18 +88,11 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Glue\ProjectGlue.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Model\AsyncLock.cs" />
-    <Compile Include="Model\CacheItem.cs" />
-    <Compile Include="Model\EntityBucket.cs" />
-    <Compile Include="Model\EntityCache.cs" />
-    <Compile Include="Model\EntityManager.cs" />
     <Compile Include="Model\JSON.cs" />
     <Compile Include="Model\LocalStorage.cs" />
-    <Compile Include="Model\LocalStorageFileRepo.cs" />
-    <Compile Include="Tests\Base\TestBase.cs" />
     <Compile Include="Tests\ReproTest.cs" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

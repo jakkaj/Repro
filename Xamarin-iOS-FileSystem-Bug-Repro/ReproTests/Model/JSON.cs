@@ -4,14 +4,8 @@ using Newtonsoft.Json;
 
 namespace XamlingCore.Portable.Data.Serialise
 {
-    public interface IEntitySerialiser
-    {
-        T Deserialise<T>(string entity)
-            where T : class;
-
-        string Serialise<T>(T entity);
-    }
-    public class JsonNETEntitySerialiser : IEntitySerialiser
+    
+    public class JsonNETEntitySerialiser
     {
         public JsonSerializerSettings Settings { get; set; }
 

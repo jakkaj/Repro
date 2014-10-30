@@ -1,28 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Autofac;
-using Foundation;
 using NUnit.Framework;
 using ReproTests.Model;
-using ReproTests.Tests.Base;
-using UIKit;
 using XamlingCore.Portable.Data.Serialise;
 
 namespace ReproTests.Tests
 {
     [TestFixture]
-    public class ReproTest : TestBase
+    public class ReproTest
     {
         [Test]
         public void ReproNoAsync()
         {
-            var serialiser = Resolve<IEntitySerialiser>();
-            var localSorage = Resolve<ILocalStorage>();
+            var serialiser = new JsonNETEntitySerialiser();
+            var localSorage = new LocalStorageHelper();
             var listOfEntities = new List<TestItem>();
 
 
@@ -60,8 +54,8 @@ namespace ReproTests.Tests
         [Test]
         public void ReproAsyncStream()
         {
-            var serialiser = Resolve<IEntitySerialiser>();
-            var localSorage = Resolve<ILocalStorage>();
+            var serialiser = new JsonNETEntitySerialiser();
+            var localSorage = new LocalStorageHelper();
             var listOfEntities = new List<TestItem>();
 
 
@@ -107,8 +101,8 @@ namespace ReproTests.Tests
         [Test]
         public void ReproAsync()
         {
-            var serialiser = Resolve<IEntitySerialiser>();
-            var localSorage = Resolve<ILocalStorage>();
+            var serialiser = new JsonNETEntitySerialiser();
+            var localSorage = new LocalStorageHelper();
             var listOfEntities = new List<TestItem>();
 
 
@@ -156,8 +150,8 @@ namespace ReproTests.Tests
         [Test]
         public void Repro()
         {
-            var serialiser = Resolve<IEntitySerialiser>();
-            var localSorage = Resolve<ILocalStorage>();
+            var serialiser = new JsonNETEntitySerialiser();
+            var localSorage = new LocalStorageHelper();
             var listOfEntities = new List<TestItem>();
 
             for (var i = 0; i < 250; i++)
